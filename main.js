@@ -13,7 +13,7 @@ $(window).on("scroll", function () {
     });
     $("header nav.navbar > a").css("color", "#000");
     $("header nav.navbar .toggle_navbar i").css("color", "#000");
-    $(".menuResponsive").$(".btnDC_backToTop").css("bottom", "35px");
+    $(".btnDC_backToTop").css("bottom", "35px");
   } else {
     $("header").css({
       background: "none",
