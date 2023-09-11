@@ -5,13 +5,29 @@ $(window).on("scroll", function () {
       "background-color": "#fff",
       position: "fixed",
     });
-    $("header nav.navbar a").css("color", "#000");
+    $(".menuResponsive").css({
+      "background-color": "rgba(255, 255, 255, 0.8)",
+    });
+    $(".menuResponsive a").css({
+      color: "#000",
+    });
+    $("header nav.navbar > a").css("color", "#000");
+    $("header nav.navbar .toggle_navbar i").css("color", "#000");
+    $(".menuResponsive").$(".btnDC_backToTop").css("bottom", "35px");
   } else {
     $("header").css({
       background: "none",
       position: "relative",
     });
-    $("header nav.navbar a").css("color", "#fff");
+    $(".menuResponsive").css({
+      "background-color": "rgba(0, 0, 0, 0.8)",
+    });
+    $(".menuResponsive a").css({
+      color: "#fff",
+    });
+    $("header nav.navbar > a").css("color", "#fff");
+    $("header nav.navbar .toggle_navbar i").css("color", "#fff");
+    $(".btnDC_backToTop").css("bottom", "-80px");
   }
 });
 
@@ -31,6 +47,11 @@ $("nav.navbar .toggle_navbar a").on("click", function () {
   } else {
     $("nav.navbar .toggle_navbar a i")
       .removeClass("fa-xmark")
-      .addClass("fa-bars"); 
+      .addClass("fa-bars");
   }
+});
+
+// sự kiện click btn backtoptop
+$(".btnDC_backToTop").on("click", function () {
+  $(window).scrollTop(0);
 });
