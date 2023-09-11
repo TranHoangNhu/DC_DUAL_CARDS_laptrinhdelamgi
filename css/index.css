@@ -1,0 +1,145 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Định nghĩa font-face cho Gotham-Bold */
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("../fonts/font_gotham/Gotham-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Định nghĩa font-face cho Gotham-Light */
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("../fonts/font_gotham/Gotham-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Định nghĩa font-face cho Avenir */
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/font_avenir/AvenirNextLTPro-BoldCnIt.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gotham-Light", sans-serif;
+  background-color: #151515;
+}
+a {
+  text-decoration: none;
+}
+/* btn component class*/
+.btnDC {
+  font-family: "Gotham-Bold", sans-serif;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  background: linear-gradient(#105dcb, #13386b);
+  color: #fff;
+  transform: skewX(-15deg);
+  margin-right: 15px;
+  box-shadow: 7px 7px #13386b;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.btnDC:hover {
+  background-image: radial-gradient(circle at center, #1a8fdf 0, #1a67d5 100%);
+  box-shadow: none;
+}
+/* ----------- start custom code website ----------------- */
+
+/* header */
+header {
+  padding: 27px 54px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: 1s;
+  position: relative;
+  z-index: 1000;
+}
+/* toggle navbar */
+header .logoHeader .toggle_navbar i {
+  color: #fdd500;
+}
+/* navbar */
+header nav.navbar a {
+  font-family: "Gotham-Bold", sans-serif;
+  color: #fff;
+  margin-right: 28px;
+  font-size: 16px;
+}
+header nav.navbar a:hover {
+  transition: 0.3s;
+  color: #fdd500;
+}
+/* main */
+/* section video carousel */
+section.video_carousel {
+  position: relative;
+  width: 100%;
+}
+section.video_carousel .video_content {
+  position: absolute;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+section.video_carousel .video_content p.subtitle {
+  font-family: "Gotham-Bold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+section.video_carousel .video_content button {
+  letter-spacing: 0.2rem;
+  padding: 12px 50px;
+}
+section.video_carousel video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+/*  background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0), #151515); */
+section.video_carousel .overplay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1070px;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0), #151515);
+}
+/* MENU TOGGLE */
+.menuResponsive {
+  position: fixed;
+  top: 80px;
+  left: -5px;
+  display: flex;
+  flex-direction: column;
+  background: #151515;
+  width: 100%;
+  opacity: 0.9;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-left: 30px;
+}
+.menuResponsive.active {
+  padding: 30px;
+  max-height: 332px;
+}
+.menuResponsive a {
+  margin: 5px 0;
+}
+.menuResponsive a:hover {
+  color: #fdd500;
+}
